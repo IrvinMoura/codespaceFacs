@@ -1,15 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from './pages/home.page';
+import './App.css';
+import Logo from "./components/Logo"
+import Navegacao from "./components/Navegacao";
+import Principal from "./components/Principal";
 
-function App() {
+
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-      </Routes>
-    </Router>
-  );
+    <>
+      <header className="topo">
+        <Logo />
+        <Navegacao />
+      </header>
+      <Principal />
+    </>
+  )
 }
 
 export default App;
