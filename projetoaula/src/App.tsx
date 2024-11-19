@@ -7,6 +7,7 @@ import Login from './pages/Login.page';
 import Home from './pages/Home.page';
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './firebase';
+import Register from './pages/Register.page';
 
 
 export const app = initializeApp(firebaseConfig);
@@ -22,6 +23,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}/>
+        <Route path='/register' element={<Register />}/>
         <Route path='/login' element={<Login />}/>
       </Routes>
     </BrowserRouter>
